@@ -4,7 +4,7 @@ GPU Finder attempts to make it easier to find and provision Compute Engine Insta
 
 ## Why GPU Finder?
 
-GPU quotas are not always consistent across regions and at any given time. At peak times, there may be limited availability of GPUs in the cloud due to the high demand for their compute power. This makes finding and provisioning of GPUs difficult and time consuming.
+GPU quotas are not always consistent across regions and at any particular time. At peak times, there may be limited availability of GPUs in the cloud due to the high demand for their compute power. This makes finding and provisioning of GPUs difficult and time consuming.
 
 ## Prerequisites
 
@@ -25,6 +25,6 @@ pip install -r requirements
     * gpu_type: [The type of GPU to use](https://cloud.google.com/compute/docs/gpus). Note that A100s have to be used with [A2 machine types](https://cloud.google.com/compute/docs/gpus/create-vm-with-gpus#examples-add-gpu-a100), while the other GPU types can be configured with N1 machine types.
     * number_of_gpus: [The number of GPUs to attach to each instance](https://cloud.google.com/compute/docs/gpus)
 4. Additional configuration like disk type, disk size, firewall rules, image type, image family, VPC, startup scripts, and others can be set in the configuration file too.
-
+5. When running the script, you will see output in the logs about which regions and zones the instances will be created in, the names of instances, and whether a quota has been reached in a given region.
 
 
