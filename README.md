@@ -14,7 +14,10 @@ GPU quotas are not always consistent across regions and at any given time. At pe
 ## Using the GPU Finder
 
 1. Download the service account key file and set the GOOGLE_APPLICATION_CREDENTIALS environment variable to authenticate with GCP APIs
-2. Use ```bash
+2. Use 
+
+```bash
 pip install -r requirements
-```` to install the Google API client library
+```` 
+to install the Google API client library
 
