@@ -14,10 +14,17 @@ GPU quotas are not always consistent across regions and at any given time. At pe
 ## Using the GPU Finder
 
 1. Download the service account key file and set the GOOGLE_APPLICATION_CREDENTIALS environment variable to authenticate with GCP APIs
-2. Use 
-
+2. Install the Google API client library by running the command below:
 ```bash
 pip install -r requirements
 ```` 
-to install the Google API client library
+3. Modify the gpu-config.json file to set the appropriate configuration parameters. In addition to the name of the machine, the important parameters to set are:
+  * number_of_instances: Number of instances to create
+  * machine_type: [The type of Compute Engine machine(s) to create](https://cloud.google.com/compute/docs/machine-types)
+  * zone: [A list of zones to attempt to create instances in](https://cloud.google.com/compute/docs/regions-zones). To attempt all zone, leave the list blank (i.e. empty brackets [] will look for instances in all zones)
+  * gpu_type: [The type of GPU to use](https://cloud.google.com/compute/docs/gpus). Note that A100s have to be used with [A2 machine types](https://cloud.google.com/compute/docs/gpus/create-vm-with-gpus#examples-add-gpu-a100), while the other GPU types can be configured with N1 machine types.
+  * number_of_gpus: [The number of GPUs to attach to each instance](https://cloud.google.com/compute/docs/gpus)
+4. Additional configuration like disk type, disk size, firewall rules, image type, image family, VPC, startup scripts, and others can be set in the configuration file too.
+
+
 
