@@ -16,7 +16,7 @@ GPU quotas are not always consistent across regions and at any particular time. 
 1. Download the service account key file and set the GOOGLE_APPLICATION_CREDENTIALS environment variable to authenticate with GCP APIs
 2. Install the Google API client library by running the command below:
 ```bash
-pip install -r requirements
+pip install -r requirements.txt
 ```` 
 3. Modify the `gpu-config.json` file to set the appropriate configuration parameters. In addition to the name of the machine, the important parameters to set are:
     * number_of_instances: Number of instances to create
