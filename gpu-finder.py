@@ -110,55 +110,6 @@ def get_accelerator_quota(compute, project, config, zone, requested_gpus):
         raise Exception(f"No accelerator types of {config['instance_config']['gpu_type']} are available with {config['instance_config']['machine_type']} in any zone, or wrong number of GPUs requested")
     return accelerator_list
 
-# def get_region_quotas(compute, project, regions):
-#     region_list = regions
-#     region_under_quota = []
-#     request = compute.regions().list(project=project)
-#     while request is not None:
-#         response = request.execute()
-#         for region in response['items']:
-#             if region['name'] in region_list:
-#                 region_zones = {
-#                     'region': region['name'],
-#                     'zones': region['zones'],
-#                     'gpu_quotas': [q for q in region['quotas'] if q['metric'] ==
-#                 }
-#                 region_under_quota.append(region_zones)
-#         return region_under_quota
-#
-#
-# def zones_with_preferred_accelerator_type(compute, project, zone, gpu_type, number_of_gpus):
-#     zone_list = []
-#     for i in zone:
-#         request = compute.acceleratorTypes().list(project=project, zone=i)
-#         while request is not None:
-#             response = request.execute()
-#             filter_accelarators = [accelerator for accelerator in response['items'] if accelerator['name'] == gpu_type]
-#             for accelerator in filter_accelarators:
-#                 if accelerator['maximumCardsPerInstance'] >= number_of_gpus:
-#                     print(f"{accelerator['maximumCardsPerInstance']} {gpu_type} GPUs per instance are available in {i}")
-#                     zone_list.append(i)
-#                 else:
-#                     print(f"{accelerator['maximumCardsPerInstance']} {gpu_type} GPUs per instance are available in {i}, however, this is lower than the {number_of_gpus} GPUs needed per instance")
-#             request = compute.acceleratorTypes().list_next(previous_request=request, previous_response=response)
-#     return zone_list
-#
-#
-# def zones_with_preferred_machine_types(compute, project, zone, machine_type):
-#     zone_list = []
-#     for i in zone:
-#         machine_by_zone_list = []
-#         request = compute.machineTypes().list(project=project, zone=i)
-#         while request is not None:
-#             response = request.execute()
-#             filter_machines = [machine for machine in response['items'] if machine['name'] == machine_type]
-#             for machine in filter_machines:
-#                 print(f"{machine_type} machine type is available in {i}")
-#                 machine_by_zone_list.append(machine)
-#             zone_list.append(machine_by_zone_list)
-#             request = compute.machineTypes().list_next(previous_request=request, previous_response=response)
-#     return zone_list
-
 
 def create_instance(compute, project, config, zone_list):
     compute_config = config
