@@ -18,7 +18,7 @@ GPU quotas are not always consistent across regions and at any particular time. 
 ```bash
 pip install -r requirements
 ```` 
-3. Modify the gpu-config.json file to set the appropriate configuration parameters. In addition to the name of the machine, the important parameters to set are:
+3. Modify the `gpu-config.json` file to set the appropriate configuration parameters. In addition to the name of the machine, the important parameters to set are:
     * number_of_instances: Number of instances to create
     * machine_type: [The type of Compute Engine machine(s) to create](https://cloud.google.com/compute/docs/machine-types)
     * zone: [A list of zones to attempt to create instances in](https://cloud.google.com/compute/docs/regions-zones). To attempt all zone, leave the list blank (i.e. empty brackets [] will look for instances in all zones)
