@@ -32,7 +32,7 @@ pip install -r requirements
 | NVIDIA® V100 | nvidia-tesla-v100    | N1                       | 1, 2, 4, 8     |
 | NVIDIA® P4   | nvidia-tesla-p4      | N1                       | 1, 2, 4        |
 | NVIDIA® P100 | nvidia-tesla-p100    | N1                       | 1, 2, 4        |
-| NVIDIA® K80  | nvidia-tesla-k80     | N1                       | 1, 2, 4 8      |
+| NVIDIA® K80  | nvidia-tesla-k80     | N1                       | 1, 2, 4, 8     |
 
 4. Additional configuration like disk type, disk size, firewall rules, image type, image family, VPC, startup scripts, and others can be set in the configuration file too.
 5. When running the script, you will see output in the logs about which regions and zones the instances will be created in, the names of instances, and whether a quota has been reached in a given region.
