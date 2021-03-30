@@ -23,6 +23,7 @@ pip install -r requirements
     * machine_type: [The type of Compute Engine machine(s) to create](https://cloud.google.com/compute/docs/machine-types)
     * zone: [A list of zones to attempt to create instances in](https://cloud.google.com/compute/docs/regions-zones). To attempt all zone, leave the list blank (i.e. empty brackets [] will look for instances in all zones)
     * gpu_type: [The type of GPU to use](https://cloud.google.com/compute/docs/gpus). Note that A100s have to be used with [A2 machine types](https://cloud.google.com/compute/docs/gpus/create-vm-with-gpus#examples-add-gpu-a100), while the other GPU types can be configured with N1 machine types.
+    ![GPU Types](https://github.com/doitintl/gpu-finder/blob/main/GPU%20Types.png)
     * number_of_gpus: [The number of GPUs to attach to each instance](https://cloud.google.com/compute/docs/gpus)
 4. Additional configuration like disk type, disk size, firewall rules, image type, image family, VPC, startup scripts, and others can be set in the configuration file too.
 5. When running the script, you will see output in the logs about which regions and zones the instances will be created in, the names of instances, and whether a quota has been reached in a given region.
