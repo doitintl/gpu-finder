@@ -37,4 +37,5 @@ pip install -r requirements.txt
 4. Additional configuration like disk type, disk size, firewall rules, image type, image family, VPC, startup scripts, and others can be set in the configuration file too.
 5. When running the script, you will see output in the logs about which regions and zones the instances will be created in, the names of instances, and whether a quota has been reached in a given region.
 
-
+## Clean Up
+There is a `delete_instance` function in the script that will delete the instances passed in the `instance_details` parameter. Please be mindful of cleaning up instances with GPUs attached when these are no longer needed.

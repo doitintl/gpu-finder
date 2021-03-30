@@ -9,12 +9,12 @@
       "autoDelete": "True"
     },
     "machine_type": "n1-standard-2",
-    "zone": ["us-central1-c", "us-central1-a", "us-central1-b", "europe-west4-a", "europe-west4-b", "asia-southeast1-c"],
+    "zone": [],
     "network_interfaces": {
       "network": "global/networks/default"
     },
-    "gpu_type": "nvidia-tesla-p4",
-    "number_of_gpus": 2,
+    "gpu_type": "nvidia-tesla-v100",
+    "number_of_gpus": 4,
     "image_project": "deeplearning-platform-release",
     "image_family": "tf2-2-4-cu110",
     "identity_and_api_access": {

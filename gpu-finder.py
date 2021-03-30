@@ -117,7 +117,7 @@ def create_instance(compute, project, config, zone_list):
     created_instances = []
     instances = 0
     regions_attempted = 0
-    print(f"There are {len(regions_to_try)} regions to try")
+    print(f"There are {len(regions_to_try)} regions to try that match the GPU type and machine type configuration.")
     for region in regions_to_try:
         print(f"Attempting to create instances in {region}")
         zones = [z for z in zone_list if z['region'] == region]
@@ -248,7 +248,7 @@ def create_instance(compute, project, config, zone_list):
                         print("done.")
                         if 'error' in result:
                             error_results = result['error']['errors']
-                            if error_results[0]['code'] == 'QUOTA_EXCEEDED':
+                            if error_results[0]['code'] in ('QUOTA_EXCEEDED', 'ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS'):
                                 move_regions = 1
                                 print(Exception(result['error']))
                             else:
