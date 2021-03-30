@@ -27,8 +27,8 @@ pip install -r requirements
 
 | GPU Model    | Configuration Name   | Compatible Machine Types | Number of GPUs |
 |--------------|----------------------|--------------------------|----------------|
-| NVIDIA® A100 | nvidia-tesla-a100    | a2-highgpu-1|2|4|8|16|g  | 1, 2, 4, 8, 16 |
-| NVIDIA® T4   | nvidia-tesla-t4      | n1-t                     | 1, 2, 4        |
+| NVIDIA® A100 | nvidia-tesla-a100    | A2                       | 1, 2, 4, 8, 16 |
+| NVIDIA® T4   | nvidia-tesla-t4      | N1                       | 1, 2, 4        |
 | NVIDIA® V100 | nvidia-tesla-v100    | N1                       | 1, 2, 4, 8     |
 | NVIDIA® P4   | nvidia-tesla-p4      | N1                       | 1, 2, 4        |
 | NVIDIA® P100 | nvidia-tesla-p100    | N1                       | 1, 2, 4        |
