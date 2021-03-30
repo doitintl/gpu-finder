@@ -4,7 +4,7 @@ GPU Finder attempts to make it easier to find and provision Compute Engine Insta
 
 ## Why GPU Finder?
 
-GPU quotas are not always consistent across regions and at any particular time. At peak times, there may be limited availability of GPUs in the cloud due to the high demand for their compute power. This makes finding and provisioning of GPUs difficult and time consuming.
+GPU quotas are not always consistent across regions and at any particular time. At peak times, there may be limited availability of GPUs in the cloud due to high demand for their compute capacity. This makes finding and provisioning of GPUs difficult and time consuming. By just setting a few configuration parameters, this script can be used to automate the process of finding and provisioning Compute Engine instances with GPUs.
 
 ## Prerequisites
 
