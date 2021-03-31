@@ -99,9 +99,8 @@ pip install -r requirements.txt
 | us-west4-b                |                                              |                           |                         |
 | us-west4-c                |	Las Vegas, Nevada, North America             |                           |                         |
 
-
-    * gpu_type: [The type of GPU to use](https://cloud.google.com/compute/docs/gpus). Note that A100s have to be used with [A2 machine types](https://cloud.google.com/compute/docs/gpus/create-vm-with-gpus#examples-add-gpu-a100), while the other GPU types can be configured with N1 machine types.
-    * number_of_gpus: [The number of GPUs to attach to each instance](https://cloud.google.com/compute/docs/gpus)
+ * gpu_type: [The type of GPU to use](https://cloud.google.com/compute/docs/gpus). Note that A100s have to be used with [A2 machine types](https://cloud.google.com/compute/docs/gpus/create-vm-with-gpus#examples-add-gpu-a100), while the other GPU types can be configured with N1 machine types.
+ * number_of_gpus: [The number of GPUs to attach to each instance](https://cloud.google.com/compute/docs/gpus)
 
 | GPU Model    | Configuration Name   | Compatible Machine Types | Number of GPUs |
 |--------------|----------------------|--------------------------|----------------|
