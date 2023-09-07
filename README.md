@@ -8,12 +8,12 @@ GPU quotas are not always consistent across regions and at any particular time. 
 
 ## Prerequisites
 
-* A GCP account and access to a service account with the permissions needed for creating instances. See the [docs](https://cloud.google.com/docs/authentication/production#passing_variable) for creating a key file and setting the GOOGLE_APPLICATION_CREDENTIALS environment variable
-* A python environment with google-api-python-client==2.0.2 library installed using pip
+* A GCP account and access to a service account with the permissions needed for creating instances. See the [docs](https://cloud.google.com/docs/authentication/production#passing_variable) for creating a key file and setting the ```GOOGLE_APPLICATION_CREDENTIALS``` environment variable
+* A python environment with ```google-api-python-client==2.0.2``` library installed using pip
 
 ## Using the GPU Finder
 
-1. Download the service account key file and set the GOOGLE_APPLICATION_CREDENTIALS environment variable to authenticate with GCP APIs
+1. Download the service account key file and set the ```GOOGLE_APPLICATION_CREDENTIALS``` environment variable to authenticate with GCP APIs
 2. Install the Google API client library by running the command below:
 ```bash
 pip install -r requirements.txt
