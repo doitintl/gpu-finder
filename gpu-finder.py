@@ -248,7 +248,7 @@ def create_instance(compute, project, config, zone_list):
                         print("done.")
                         if 'error' in result:
                             error_results = result['error']['errors']
-                            if error_results[0]['code'] in ('QUOTA_EXCEEDED', 'ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS'):
+                            if error_results[0]['code'] in ('QUOTA_EXCEEDED', 'ZONE_RESOURCE_POOL_EXHAUSTED', 'ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS'):
                                 move_regions = 1
                                 print(Exception(result['error']))
                             else:
